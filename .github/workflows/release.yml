@@ -24,7 +24,7 @@ jobs:
           git config user.name "GitHub Actions"
 
       - name: Git tag release
-        uses: tvdias/github-tagger@v0.0.1
+        uses: tvdias/github-tagger@v0.0.2
         with:
           repo-token: ${{ secrets.GITHUB_TOKEN }}
           tag: ${{ github.event.inputs.releaseVersion }}
