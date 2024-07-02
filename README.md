@@ -144,3 +144,20 @@ Pro components used in the starter are :
  - [Vaadin Confirm Dialog](https://vaadin.com/components/vaadin-confirm-dialog) 
 
  Also, the tests are created using [Testbench](https://vaadin.com/testbench) library.
+
+## Trivy
+A comprehensive and versatile security scanner - Aqua Security
+
+### Instalation
+on macOS run
+```sh
+brew install trivy
+```
+to scan local filesystem run
+```sh
+trivy fs .
+```
+to explore more options run
+```sh
+trivy -h
+```
