@@ -16,7 +16,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Check out project
-        uses: actions/checkout@v4.0.0
+        uses: actions/checkout@v4
 
       - name: Configure Git user
         run: |
@@ -35,7 +35,7 @@ jobs:
     needs: [ tag_release ]
 
     steps:
-      - uses: actions/checkout@v4.0.0
+      - uses: actions/checkout@v4
         with:
           ref: ${{ github.event.inputs.releaseVersion }}
 
