@@ -37,7 +37,7 @@ jobs:
       - name: Install dependencies
         run: mvn install -DskipTests
 
-      - name: Install Trivy
+      - name: Install and run Trivy
         uses: aquasecurity/trivy-action@0.20.0
         with:
           scan-type: 'fs'
@@ -45,4 +45,3 @@ jobs:
           format: 'table'
           exit-code: '1'
           ignore-unfixed: true
-          ignorefile: '.trivyignore'
