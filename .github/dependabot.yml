@@ -4,3 +4,8 @@ updates:
     directory: "/"
     schedule:
       interval: "daily"
+    commit-message:
+      prefix: "deps"
+    target-branch: "main"
+    rebase-strategy: auto
+    pull-request-branch-prefix: "dependabot/"
