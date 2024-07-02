@@ -15,7 +15,7 @@ jobs:
 
     steps:
       - name: Check out project
-        uses: actions/checkout@v4
+        uses: actions/checkout@v4.0.0
 
       - name: Cache local Maven repository
         uses: actions/cache@v2
