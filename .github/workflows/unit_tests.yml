@@ -9,7 +9,7 @@ on:
       - 'master'
 
 jobs:
-  build:
+  test:
     runs-on: ubuntu-latest
 
     strategy:
@@ -23,6 +23,7 @@ jobs:
     - name: Set up JDK
       uses: actions/setup-java@v4.2.1
       with:
+        distribution: 'adopt'
         java-version: ${{ matrix.java-version }}
 
     - name: Cache Maven packages
