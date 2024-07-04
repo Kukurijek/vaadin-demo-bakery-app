@@ -23,7 +23,7 @@ jobs:
         java-version: '8'
 
     - name: SonarQube Scan
-      uses: warchant/setup-sonar-scanner@v8
+      uses: warchant/setup-sonar-scanner@v7
 
     - name: SonarQube Scan
       run: sonar-scanner
