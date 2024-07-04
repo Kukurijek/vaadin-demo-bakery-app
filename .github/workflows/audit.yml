@@ -1,4 +1,4 @@
-name: Lint Check
+name: Audit Check
 
 on:
   pull_request:
@@ -10,7 +10,7 @@ on:
 
 jobs:
   check:
-    name: Lint Check
+    name: Audit Check
     runs-on: ubuntu-latest
 
     steps:
@@ -22,8 +22,7 @@ jobs:
         with:
           node-version: '14'
 
-      - name: Install dependencies and run lint
+      - name: Install dependencies and run audit
         run: |
-          cd build-tools
-          npm install
-          npm run gulp lint
+          npm ci
+          npm audit
