@@ -25,5 +25,5 @@ jobs:
       - name: Install dependencies and run lint
         run: |
           cd build-tools
-          npm ci
+          npm install
           npm run gulp lint
