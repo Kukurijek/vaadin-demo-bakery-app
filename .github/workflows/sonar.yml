@@ -20,7 +20,7 @@ jobs:
     - uses: actions/setup-java@v4.2.1
       with:
         distribution: 'adopt'
-        java-version: '8'
+        java-version: '17'
 
     - name: SonarQube Scan
       uses: warchant/setup-sonar-scanner@v7
