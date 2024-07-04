@@ -38,3 +38,14 @@ jobs:
            -Dsonar.java.binaries=target/test-classes/com/kiroule/vaadin/bakeryapp
            -Dsonar.jacoco.reportsPath=target/jacoco.exec 
 
+    - name: SonarQube Quality Gate check
+      id: sonarqube-quality-gate-check
+      uses: sonarsource/sonarqube-quality-gate-action@v1.1.0
+
+      timeout-minutes: 5
+      env:
+       SONAR_TOKEN: ${{ secrets.SONAR_CLOUD_TOKEN }}
+       SONAR_HOST_URL: ${{ secrets.SONAR_CLOUD_URL }}
+
+    - name: "Quality Gate Status value"
+      run: echo "The Quality Gate status is ${{ steps.sonarqube-quality-gate-check.outputs.quality-gate-status }}"
