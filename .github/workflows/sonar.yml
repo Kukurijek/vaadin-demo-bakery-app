@@ -1,18 +1,17 @@
 name: Sonar Cloud Scann
 
 on:
+  pull_request:
+    branches:
+      - 'master'
   push:
     branches:
-      - master
-      - develop
-      - 'releases/**'
-  pull_request:
-      types: [opened, synchronize, reopened]
+      - 'master'
 
-name: Main Workflow
 jobs:
   sonarqube:
     runs-on: ubuntu-latest
+    
     steps:
     - uses: actions/checkout@v4.1.7
       with:
