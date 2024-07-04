@@ -36,3 +36,5 @@ jobs:
            -Dsonar.projectKey=${{ secrets.SONAR_CLOUD_PROJECT_KEY }}
            -Dsonar.sources=src/
            -Dsonar.java.binaries=target/test-classes/com/kiroule/vaadin/bakeryapp
+           -Dsonar.jacoco.reportsPath=target/jacoco.exec 
+
