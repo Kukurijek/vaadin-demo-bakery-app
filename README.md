@@ -4,9 +4,9 @@ Vaadin Demo Bakery App
 
 # Running the Project in Production Mode with Docker 
 ```bash
-$ docker build --rm -t bakery-app .
-$ docker run --name bakery-app -d bakery-app
-$ docker logs -f bakery-app 
+ docker build --rm -t bakery-app .
+ docker run --name bakery-app -d bakery-app
+ docker logs -f bakery-app
 ```
 The application is available at `http://container-ip:8080/`. To get the container IP address, execute the following command:
 ```console
@@ -102,11 +102,6 @@ mvn clean
 ```
 before running in the other mode.
 
-# Running in Eclipse or IntelliJ
-As both IDEs support running Spring Boot applications you just have to import the project and select `com.kiroule.vaadin.bakeryapp.Application` as main class if not done automatically. Using an IDE will also allow you to speed up development even more. Just check https://vaadin.com/blog/developing-without-server-restarts.
-
-## IntelliJ < 2018
-Unfortunately, up to IntelliJ 2017 dependencies scoped as `provided` in the Maven POM will not be loaded on startup. As a workaround you will have to remove the scope definition of `spring-boot-starter-tomcat` and `javax.servlet-api` from the pom.xml.
 
 # Running Scalability Tests
 
@@ -135,15 +130,6 @@ In order to run the scalability tests locally:
     ```
 
 Note: If you run Bakery with an in-memory database (like H2, which is the default), it will logically use more memory than when using an external database (like PostgreSQL). It is recommend to run scalability tests for Bakery only after you have configured it to use an external database.
-
-
-## Pro components
-Pro components used in the starter are :
- - [Vaadin Crud](https://vaadin.com/components/vaadin-crud)
- - [Vaadin Charts](https://vaadin.com/components/vaadin-charts)
- - [Vaadin Confirm Dialog](https://vaadin.com/components/vaadin-confirm-dialog) 
-
- Also, the tests are created using [Testbench](https://vaadin.com/testbench) library.
 
 ## Trivy
 A comprehensive and versatile security scanner - Aqua Security
