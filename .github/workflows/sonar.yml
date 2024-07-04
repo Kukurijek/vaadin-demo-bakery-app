@@ -21,3 +21,5 @@ jobs:
       env:
         SONAR_TOKEN: ${{ secrets.SONAR_CLOUD_TOKEN }}
         SONAR_HOST_URL: ${{ secrets.SONAR_CLOUD_URL }}
+        SONAR_ORGANIZATION: ${{ secrets.SONAR_CLOUD_ORGANIZATION }}
+        SONAR_PROJECT_KEY: ${{ secrets.SONAR_CLOUD_PROJECT_KEY }}
