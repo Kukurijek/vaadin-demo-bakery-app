@@ -25,10 +25,10 @@ jobs:
     - name: Build with Maven
       run: mvn clean package
 
-    - name: SonarQube Scan
+    - name: Setup SonarQube
       uses: warchant/setup-sonar-scanner@v7
 
-    - name: SonarQube Scan
+    - name: SonarQube Scan Run
       run: sonar-scanner
            -Dsonar.host.url=${{ secrets.SONAR_CLOUD_URL }}
            -Dsonar.login=${{ secrets.SONAR_CLOUD_TOKEN }}
