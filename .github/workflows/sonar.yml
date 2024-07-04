@@ -32,5 +32,5 @@ jobs:
            -Dsonar.organization=${{ secrets.SONAR_CLOUD_ORGANIZATION }}
            -Dsonar.projectKey=${{ secrets.SONAR_CLOUD_PROJECT_KEY }}
            -Dsonar.sources=src/
-           -Dsonar.java.binaries=target/main/java/com/kiroule/vaadin/bakeryapp
+           -Dsonar.java.binaries=target/test-classes
           # -Dsonar.sources=$GITHUB_WORKSPACE
