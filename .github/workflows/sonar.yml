@@ -31,4 +31,5 @@ jobs:
            -Dsonar.login=${{ secrets.SONAR_CLOUD_TOKEN }}
            -Dsonar.organization=${{ secrets.SONAR_CLOUD_ORGANIZATION }}
            -Dsonar.projectKey=${{ secrets.SONAR_CLOUD_PROJECT_KEY }}
+           -Dsonar.sources=src/
           # -Dsonar.sources=$GITHUB_WORKSPACE
