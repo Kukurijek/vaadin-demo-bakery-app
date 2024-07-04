@@ -27,7 +27,7 @@ jobs:
 
     - name: SonarQube Scan
       run: sonar-scanner
-           -Dsonar.host.url=${{ secrets.SONAR_CLOUD_TOKEN }}
+           -Dsonar.host.url=${{ secrets.SONAR_CLOUD_URL }}
            -Dsonar.login=${{ secrets.SONAR_CLOUD_TOKEN }}
            -Dsonar.organization=${{ secrets.SONAR_CLOUD_ORGANIZATION }}
            -Dsonar.projectKey=${{ secrets.SONAR_CLOUD_PROJECT_KEY }}
