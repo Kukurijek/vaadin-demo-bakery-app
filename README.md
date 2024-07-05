@@ -2,6 +2,10 @@ Vaadin Demo Bakery App
 =======================
 ![Master Branch](https://github.com/Kukurijek/vaadin-demo-bakery-app/actions/workflows/build.yml/badge.svg?branch=master)
 
+# Architecture
+
+![Architecture Diagram](img/arch.png)
+
 # Running the Project in Production Mode with Docker 
 ```bash
  docker build --rm -t bakery-app .
