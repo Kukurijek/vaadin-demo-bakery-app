@@ -147,3 +147,10 @@ to explore more options run
 ```sh
 trivy -h
 ```
+
+## Local testing
+run
+
+```sh
+docker-compose up --build
+```
