@@ -27,7 +27,7 @@ jobs:
       - name: Git tag release
         uses: tvdias/github-tagger@v0.0.2
         with:
-          repo-token: ${{ secrets.GITHUB_TOKEN }}
+          repo-token: ${{ secrets.VAADIN_DEMO_BAKERY_APP_TOKEN }}
           tag: ${{ github.event.inputs.releaseVersion }}
 
   docker_image:
