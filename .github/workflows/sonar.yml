@@ -26,7 +26,7 @@ jobs:
       run: mvn clean package
 
     - name: Setup SonarQube
-      uses: warchant/setup-sonar-scanner@v7
+      uses: warchant/setup-sonar-scanner@v8
 
     - name: SonarQube Scan Run
       run: sonar-scanner
